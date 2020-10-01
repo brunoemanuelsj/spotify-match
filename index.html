@@ -5,20 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>spotify-match</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="login.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f0a81de932.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <form class="slide-top" action="">
-        <div>
-            <label for="fname">Endereço de e-mail ou nome de usuário:</label>
-            <input type="text" id="fname" name="fname">
-            <label for="lname">Senha:</label>
-            <input type="text" id="lname" name="lname">
+    <div class="login" id="slide-top">
+        <form action="#">
+            <label for="">
+                Endereço de e-mail ou nome de usuário:
+                <input type="email" id="fname" ondclick="hideSymbols();">
+            </label>
+            <label for="">
+                Senha:
+                <input type="password" id="lname" ondclick="hideSymbols();">
+            </label>
             <input class="button" type="submit" value="Submit">
-        </div>
-    </form>
-</body>
+        </form>
+    </div>
 
+</body>
 </html>

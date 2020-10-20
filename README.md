@@ -26,7 +26,7 @@ Here are the technologies used in this project.
 * JavaScript 
 * HTML5
 * CSS
-* My
+* MySQL
 
 ## Versioning
 

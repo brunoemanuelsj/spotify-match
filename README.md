@@ -1,5 +1,5 @@
 # Spotify-match  
-
+___
 
 
 ## Description 
@@ -35,7 +35,7 @@ Here are the technologies used in this project.
 * Java
 
 ### Backend frameworks -
-* Spring Bootkm
+* Spring Boot
 
 ### Database -
 * MySQL

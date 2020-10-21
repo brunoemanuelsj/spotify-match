@@ -65,7 +65,7 @@ ___
 *  **Bruno Emanuel**: @brunoemanuelsj (https://github.com/brunoemanuelsj)
 *  **Cauã Rebelo**: @cauarebelo (https://github.com/cauarebelo)
 *  **Gustavo Marques**: @GustavoMarques02 (https://github.com/GustavoMarques02)
-*  **Halleffy**: @winderciu (https://github.com/winderciu)
+*  **Christopher**: @winderciu (https://github.com/winderciu)
 *  **Virgínia de Fernandes**: @videfernandes (https://github.com/videfernandes)
 
 _**Please follow github and join us!**_  

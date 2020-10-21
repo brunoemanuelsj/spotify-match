@@ -27,15 +27,15 @@ Here are the technologies used in this project.
 * CSS
 
 ### Frontend framework - 
-* Angular 10
+* [Angular 10](https://angular.io)
 
 ### Backend -
-* Node.js
+* [Node.js](https://nodejs.org)
 * JavaScript
 * Java
 
 ### Backend frameworks -
-* Spring Boot
+* [Spring Boot](https://spring.io/projects/spring-boot)
 
 ### Database -
 * MySQL

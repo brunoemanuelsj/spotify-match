@@ -30,15 +30,21 @@ Here are the technologies used in this project.
 * Angular 10
 
 ### Backend -
-* Node.js
+* Node.js - 12.19.0
 * JavaScript
-* Java
+* Java - 10.0.1
 
 ### Backend frameworks -
 * Spring Boot
 
 ### Database -
 * MySQL
+
+### Ingrated Development Environment -  
+* Visual Studio Code
+
+### Version Control Software - 
+* Git
 
 ## Getting started
 ___
@@ -71,9 +77,9 @@ ___
 _**Please follow github and join us!**_  
 _**Thanks to visiting us and good coding!**_
 
-Telas de login
 
-Preview:
+##Preview:
+___
 
 https://brunoemanuelsj.github.io/spotify-match/
 

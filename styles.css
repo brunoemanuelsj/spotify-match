@@ -56,6 +56,22 @@ input{
     
 }
 
+button{
+    width: 360px;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    background-color: #ecf0f1;
+}
+
+a{
+    text-decoration: none;
+    color:white;
+}
+a:hover{
+    color:black;
+}
+
 label{
     margin-left: 20px;
     margin-top: 30px;

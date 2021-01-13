@@ -16,34 +16,36 @@ The tool uses information given by users about their musical taste for profiles 
 
  
 
+
 ## Technology
 ___
+###This document borrows from:
+* Web API | Spotify for Developers
+###Here are the technologies used in this project:  
 
-Here are the technologies used in this project.  
-
-### Frontend languages - 
+#### Frontend languages - 
 * JavaScript 
 * HTML5
 * CSS
 
-### Frontend framework - 
-* Angular 10
+ 
 
-### Backend -
+
+#### Backend -
 * Node.js - 12.19.0
 * JavaScript
-* Java - 10.0.1
 
-### Backend frameworks -
-* Spring Boot
 
-### Database -
-* MySQL
 
-### Ingrated Development Environment -  
+
+
+
+
+
+#### Ingrated Development Environment -  
 * Visual Studio Code
 
-### Version Control Software - 
+#### Version Control Software - 
 * Git
 
 ## Getting started
@@ -53,6 +55,7 @@ Make sure to have `Node`, `npm` and `expo` intalled in your local machine
 
 - Clone this repo: 
 - ```git clone https://github.com/brunoemanuelsj/spotify-match```
+- Run `npm install`.
  
 ## Versioning
 ___
@@ -78,8 +81,6 @@ _**Please follow github and join us!**_
 _**Thanks to visiting us and good coding!**_
 
 
-##Preview:
-___
 
 https://brunoemanuelsj.github.io/spotify-match/
 

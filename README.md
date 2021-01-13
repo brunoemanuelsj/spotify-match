@@ -21,24 +21,17 @@ The tool uses information given by users about their musical taste for profiles 
 ___
 ### This document borrows from:
 * Web API | Spotify for Developers
-###Here are the technologies used in this project:  
+### Here are the technologies used in this project:  
 
 #### Frontend languages - 
 * JavaScript 
 * HTML5
 * CSS
 
- 
-
 
 #### Backend -
 * Node.js - 12.19.0
 * JavaScript
-
-
-
-
-
 
 
 

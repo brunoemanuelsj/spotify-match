@@ -19,7 +19,7 @@ The tool uses information given by users about their musical taste for profiles 
 
 ## Technology
 ___
-###This document borrows from:
+### This document borrows from:
 * Web API | Spotify for Developers
 ###Here are the technologies used in this project:  
 

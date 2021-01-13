@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const SpotifyWebAPI = require('spotify-web-api-node')
 const path = require('path')
+const fetch = require('node-fetch')
 const scopes = [
     'ugc-image-upload',
     'user-read-playback-state',
@@ -32,17 +33,31 @@ const spotifyApi = new SpotifyWebAPI({
 
 app.use(express.static(__dirname))
 
+let user = {}
+
+app.get('/getuser', (req, response) => {
+  response.send(user)
+})
+app.get('/perfil', (req, res) => {
+  setTimeout(() => res.sendFile(path.join(__dirname,'/perfil/index.html')), 1000)
+})
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname,'/home/index.html'))
 })
-app.get('/registro', (req, res) => {
-  res.sendFile(path.join(__dirname,'/registro/index.html'))
-})
-app.get('/login', (req, res) => {
-  res.sendFile(path.join(__dirname,'/login/index.html'))
-})
+
 app.get('/vincularconta', (req, res) => {
     res.redirect(spotifyApi.createAuthorizeURL(scopes))
+})
+
+
+let isLoggedIn = false
+
+app.get('/islogged', (req, res) => {
+  res.send(isLoggedIn)
+})
+
+app.get('/redirect', (req, res) => {
+  res.redirect('/perfil')
 })
 
 app.get('/callback', (req, res) => {
@@ -64,28 +79,49 @@ app.get('/callback', (req, res) => {
   
         spotifyApi.setAccessToken(access_token);
         spotifyApi.setRefreshToken(refresh_token);
-  
-        console.log('access_token:', access_token);
-        console.log('refresh_token:', refresh_token);
-  
-        console.log(
-          `Sucessfully retreived access token. Expires in ${expires_in} s.`
-        );
-        res.redirect('/');
+
+        let a=false, b=false, c=false
+
+        spotifyApi.getMe().then(res => {
+          isLoggedIn=true
+          user = {
+            name: res.body.display_name,
+            image: res.body.images[0],
+            country:res.body.country
+          }
+          a=true
+        })
+
+        spotifyApi.getMyTopArtists().then(res => {
+          user = {
+            ...user, 
+            topArtists: res.body.items.slice(0, 5),
+          }
+          b=true
+        })
+
+        spotifyApi.getMyTopTracks().then(res => {
+          user = {
+            ...user,
+            topTracks: res.body.items.slice(0,5)
+          }
+          c=true
+        })
+
   
         setInterval(async () => {
           const data = await spotifyApi.refreshAccessToken();
           const access_token = data.body['access_token'];
-  
-          console.log('The access token has been refreshed!');
-          console.log('access_token:', access_token);
           spotifyApi.setAccessToken(access_token);
         }, expires_in / 2 * 1000);
       })
       .catch(error => {
-        console.error('Error getting Tokens:', error);
         res.send(`Error getting Tokens: ${error}`);
       });
+
+      setTimeout(() => res.redirect('/'), 1000)
   });
+
+
 
 app.listen(5000)
